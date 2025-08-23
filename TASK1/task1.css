@@ -1,0 +1,18 @@
+h1{
+    color: crimson;
+    font-family: Arial;
+    text-align: center;
+}
+
+img{
+    border: 2px black solid;
+}
+
+#mybtn:hover{
+    text-decoration: underline;
+    color: goldenrod;
+}
+#mybtn{
+    border-radius: 15px;
+   
+}
