@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registerForm</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <form id="container" >
+        <h1 id="head">Registration Form</h1>
+    <div id="div1">    
+        <br>
+        <label for="name"  class="ldetail">Full Name</label><br>
+        <input type="text" id="name" class="detail" placeholder="Enter your name"><br>
+        
+        <label for="email" class="ldetail">Email</label><br>
+        <input type="email" id="email" class="detail" placeholder="Enter your Email"><br>
+
+        <label for="s1" class="ldetail">Gender</label> <br>
+        <select id="s1" class="detail">
+            <option value=""disabled selected hidden></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select> <br> <br>
+
+        <input type="submit" id="submit"  >    
+    </div>
+    <p id="formmessage"></p>
+    </form>
+    
+
+    <script src="register.js"></script>
+</body>
+</html>
