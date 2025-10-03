@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Capstone Blog • Fast & Responsive</title>
+  <meta name="description" content="A fast, responsive, cross-browser blog demo (HTML/CSS/JS)">
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <div class="logo">Blog</div>
+        <div>
+          <h1>Capstone Blog</h1>
+          <p class="lead">Fast • Responsive • Offline-capable</p>
+        </div>
+      </div>
+      <div class="controls">
+        <input aria-label="Search posts" id="search" type="search" placeholder="Search posts...">
+        <button id="newPostBtn" class="btn">+ New Post</button>
+      </div>
+    </header>
+
+    
+    <div class="grid">
+    
+      <main class="main">
+        <section class="card" aria-labelledby="posts-heading">
+          <h2 id="posts-heading">Posts</h2>
+          <div id="postsList" aria-live="polite"></div>
+          <div id="emptyState" class="muted" style="margin-top:12px">No posts yet. Click “New Post” to create one.</div>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <h3>About this demo</h3>
+          <p class="muted">Features: create/edit/delete posts, localStorage persistence, lazy-loaded images, search & tag filtering, responsive layout, and offline caching.</p>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+     
+        <div class="card">
+          <h3>Create / Edit</h3>
+          <form id="postForm">
+            <div class="row">
+              <label class="muted">Title <input id="title" required placeholder="Post title"></label>
+            </div>
+            <div class="row">
+              <label class="muted">Image URL <input id="img" placeholder="https://..."></label>
+            </div>
+            <div class="row">
+              <label class="muted">Tags (comma-separated) <input id="tags" placeholder="travel, tech"></label>
+            </div>
+            <div class="row">
+              <label class="muted">Content <textarea id="content" placeholder="Write your post..."></textarea></label>
+            </div>
+            <div class="row row-inline">
+              <button class="btn" type="submit">Save</button>
+              <button id="cancelEdit" type="button" class="btn ghost">Cancel</button>
+            </div>
+            <input type="hidden" id="editingId">
+          </form>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Tags</h3>
+          <div id="tagList" class="tag-list"></div>
+        </div>
+
+        
+        <div class="card" style="margin-top:12px">
+          <h3>Settings</h3>
+          <div class="muted">Storage: <span id="storageInfo">localStorage</span></div>
+          <div style="margin-top:8px">
+            <button id="clearAll" class="btn ghost">Clear All Posts</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  
+  <script src="script.js" defer></script>
+</body>
+</html>
